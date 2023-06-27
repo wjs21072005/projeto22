@@ -31,6 +31,9 @@ mysqli_query($link, $sql);
 echo"<scripit>window.alert('USUARIO ALTERADO COM SUCESSO!');</scripit>";
 echo"<scripit>window.location.href='admhome.php';</scripit>";
 
+}
+}
+
 
 ?>
 
@@ -49,6 +52,7 @@ echo"<scripit>window.location.href='admhome.php';</scripit>";
         <li><a href="listausuario.php">LISTA USUARIO</a></li>
         <li><a href="cadastraproduto.php">CADASTRA PRODUTO</a></li>
         <li><a href="listaproduto.php">LISTA PRODUTO</a></li>
+        <li><a href="cadastracliente.php">CADASTRA CLIENTE</a></li>
         <li><a href="listacliente.php">LISTA CLIENTE</a></li>
        <li class="menuloja"><a href="./areacliente/loja.php">LOJA</a></li>
        <ul>
