@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
        #VALIDAÇÃO DE CLIENTE. VERIFICA SE O CLIENTE JA EXISTE
-       $sql = "SELECT COUNT(cli_id) FROM clientes WHERE cli_cpf ='$cpf'";
+       $sql = "SELECT COUNT(cli_cpf) FROM clientes WHERE cli_cpf ='$cpf'";
        $retorno = mysqli_query($link, $sql);
 
           
@@ -37,11 +37,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
          }
          else{
            $sql = "INSERT INTO clientes (cli_cpf,cli_nome,cli_senha,cli_datanasc,cli_telefone,cli_logradouro,cli_numero,cli_cidade,cli_ativo)    
-           VALUES('$cpf','$nome','$senha',STR_TO_DATE('$datanasc','%Y-%m-%d'),'$telefone','$logradouro','$numero','$cidade','n')";
+           VALUES('$cpf','$nome','$senha',STR_TO_DATE('$datanasc','%Y-%m-%d'),'$telefone','$logradouro','$numero','$cidade','s')";
            mysqli_query($link, $sql);
            #CADASTRA O CLIENTE E JOGA MENSAGEM NA TELA E DIRECIONA PARA LISTA USUARIO
            echo"<script>window.alert('CLIENTE CADASTRADO COM SUCESSO');</script>)";
-           echo"<script>window.location.href='listaclientes.php';<script>";
+           echo"<script>window.location.href='listacliente.php';<script>";
 
       }
  }
@@ -86,7 +86,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
          <br>
          <input type="number" name="numero" id="numero"placeholder="NUMERO">
          <br>
-         <input type="text" name="cidade" id="cidade" value="CIDADE">
+         <input type="text" name="cidade" id="cidade" placeholder="CIDADE">
          <br>
          <input type="submit" name="salvar" id="salvar" value="SALVAR">
          </form>

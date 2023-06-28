@@ -15,14 +15,14 @@ $ativo = 's';
 
 #COLETA O BOTÃO DO POST 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $sql = $_POST['ativo'];
+    $ativo = $_POST['ativo'];
 
-    #VERIFICA SE USUARIO ESTÁ ATIVO PARA LISTAR
+    #VERIFICA SE USUARIO ESTÁ ATIVO PARA LISTAR    
     if ($ativo == 's') {
         $sql = "SELECT * FROM  usuarios WHERE usu_ativo = 's' ";
         $retorno = mysqli_query($link, $sql);
     } else {
-        $sql = "SELECT * FROM  usuarios WHERE usu_ativo = 's' ";
+        $sql = "SELECT * FROM  usuarios WHERE usu_ativo = 'n' ";
         $retorno = mysqli_query($link, $sql);
     }
 }
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <li><a href="listaproduto.php">LISTA PRODUTO</a></li>
             <li><a href="cadastracliente.php">CADASTRA CLIENTE</a></li>
             <li><a href="listacliente.php">LISTA CLIENTE</a></li>
-            <li class="menuloja"><a href="./logout.php">SOME</a></li>
+            <li class="menuloja"><a href="./logout.php">SAIR</a></li>
             <?php
             #ABERTO O PHP PARA VALIDAR SE A SESSÃO DO USUARIO ESTÁ ABERTA
             #SE SESSÃO ABERTA, FECHA O PHP PARA USAR ELEMENTOS HTML
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          ?>
           <tr> 
             <td><?= $tbl[1]?></td> <!-- TRAZ SOMENTE A COLUNA 1 DO BANCO [NOME]-->
-            <td> <a href="alterausario.php?id=<?=$tbl[0]?>">
+            <td> <a href="alterausuario.php?id=<?=$tbl[0]?>">
              <input type="button" value="ALTERAR DADOS"></a></td> <!-- CRIANDO UM BOTÃO ALTERAR PASSANDO O ID DO USUARIO NA URL VIA GET -->
             <td><?=$check =($tbl[3] == 's')?"SIM":"NÃO"?></td> <!-- VALIDA S OU N  E ESCREVE "SIM" E "NÃO" -->
             </tr>
