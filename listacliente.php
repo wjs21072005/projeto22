@@ -76,38 +76,59 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container">
             <table border="1">
                 <tr>
-                    <th>NOME</th>
                     <th>CPF</th>
+                    <th>NOME</th>
+                    <th>DATA DE NASCIMENTO</th>
+                    <th>TELEFONE</th>
+                    <th>LOGRADOURO</th>
+                    <th>NUMERO</th>
+                    <th>CIDADE</th>
                     <th>ALTERAR DADOS</th>
                     <th>ATIVO</th>
                 </tr>
-                <!-- BRUXARIA EM PHP -->
+
+            <!-- BRUXARIA EM PHP -->
+
                 <?php
+
                 while ($tbl = mysqli_fetch_array($retorno)) {
+
                 ?>
+
                     <tr>
-                        <td><?= $tbl[2] ?></td> <!-- TRAZ SOMENTE A COLUNA 2 DO BANCO [NOME]-->
-                        <td><?= $tbl[1] ?></td> <!-- TRAZ SOMENTE A COLUNA 1 DO BANCO [CPF]-->
-                        <td> <a href="alteracliente.php?id=<?= $tbl[0] ?>">   
-                       <input type="button" value="ALTERAR DADOS"></a></td> <!-- CRIANDO UM BOTÃO ALTERAR PASSANDO O ID DO cliente NA URL VIA GET -->
-                        <td><?= $check = ($tbl[9] == 's') ? "SIM" : "NÃO" ?></td> <!-- VALIDA S OU N  E ESCREVE "SIM" E "NÃO" -->
+
+                        <td><?= $tbl[1] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [CPF] -->
+
+                        <td><?= $tbl[2] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [NOME] -->
+
+                        <td><?= $tbl[4] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [DATA DE NASCIMENTO] -->
+
+                        <td><?= $tbl[5] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [TELEFONE] -->
+
+                        <td><?= $tbl[6] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [LOGRADOURO] -->
+
+                        <td><?= $tbl[7] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [NUMERO] -->
+
+                        <td><?= $tbl[8] ?></td> <!-- TRAZ SOMENTE A COLUNA ! DO BANCO [CIDADE] -->
+
+                        <td><a href="alteraclientes.php?id= <?= $tbl[0] ?>">
+
+                                <input type="button" value="ALTERAR DADOS"></a></td><!--CRIANDO UM BOTÃO ALTERAR PASSANDO O ID DO USUARIO VIA GET-->
+
+                        <td><?= $check = ($tbl[9] == 's') ? "SIM" : "NÃO" ?></td><!-- VALIDA S OU N E ESCREVE "SIM" E "NÃO-->
+
                     </tr>
-                 <?php
+
+                <?php
+
                 }
+
                 ?>
+
             </table>
+
         </div>
-    </div>
-
-
-</body>
-
-</html>
 
 
 
 
-
-
-
-?>

@@ -60,16 +60,17 @@ echo"<scripit>window.location.href='admhome.php';</scripit>";
     
     <div>
          <form action="alterausuario.php" method="post">
-         <input type="hidden" name="id" value="<?=$id?>">
-         <input type="text" name="nome"  value="<?=$nome?>" required>
+         <input type="hidden" nome="id" value="<?=$id?>">
          <br>
-         <input type="password" name="senha" id="senha" value="<?=$senha?>" required>
+         <input type="text" nome="nome"  value="<?=$nome?>" required>
          <br>
-         <input type="radio" name="ativo" value="s" <?$ativo =="s"?"checked":""?>>ATIVO
+         <input type="password" nome="senha" id="senha" value="<?=$senha?>" required>
          <br>
-         <input type="radio" name="ativo" value="n" <?$ativo =="n"?"checked":""?>>INATIVO
+         <input type="radio" nome="ativo" value="s" <?$ativo =="s"?"checked":""?>>ATIVO
+         <br>
+         <input type="radio" nome="ativo" value="n" <?$ativo =="n"?"checked":""?>>INATIVO
        
-         <input type="submit" name="salvar" id="salvar" value="SALVAR">
+         <input type="submit" nome="salvar" id="salvar" value="SALVAR">
          </form>
     </div>
 

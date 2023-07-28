@@ -72,23 +72,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     <div>
          <form action="cadastracliente.php" method="post">
-         <input type="number" name="cpf" id="cpf"placeholder="CPF">
+         <input type="number" nome="cpf" id="cpf"placeholder="CPF">
          <br>
-         <input type="text" name="nome" placeholder="NOME CLIENTE">
+         <input type="text" nome="nome" placeholder="NOME CLIENTE">
          <br>
-         <input type="password" name="senha" id="senha"placeholder="SENHA">
+         <input type="password" nome="senha" id="senha"placeholder="SENHA">
          <br>
-         <input type="date" name="date" id="date"placeholder="DATE">
+         <input type="date" nome="date" id="date"placeholder="DATE">
          <br>
-         <input type="number" name="telefone" id="telefone"placeholder="TELEFONE">
+         <input type="number" nome="telefone" id="telefone"placeholder="TELEFONE">
          <br>
-         <input type="text" name="logradouro" id="logradouro"placeholder="LOGRADOURO">
+         <input type="text" nome="logradouro" id="logradouro"placeholder="LOGRADOURO">
          <br>
-         <input type="number" name="numero" id="numero"placeholder="NUMERO">
+         <input type="number" nome="numero" id="numero"placeholder="NUMERO">
          <br>
-         <input type="text" name="cidade" id="cidade" placeholder="CIDADE">
+         <input type="text" nome="cidade" id="cidade" placeholder="CIDADE">
          <br>
-         <input type="submit" name="salvar" id="salvar" value="SALVAR">
+         <input type="submit" nome="salvar" id="salvar" value="SALVAR">
          </form>
     </div>
     

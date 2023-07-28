@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <!-- AQUI LISTA OS USUARIOS DO BANCO  -->
     <div id="background">
-        <form action="listausuario.php" method="post">
+        <form action="listacliente.php" method="post">
             <input type="radio" name="ativo" class="radio" value="s" required 
             onclick="submit()" <?=$ativo =='s'?"checked":""?>>ATIVOS
 
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 ?>
                     <tr>
                         <td><?= $tbl[1]?></td> <!-- TRAZ SOMENTE A COLUNA 1 DO BANCO [NOME]-->
-                        <td><a href="alterausuario.php?id=<?= $tbl[0]?>">
+                        <td><a href="alteracliente.php?id=<?= $tbl[0]?>">
                         <input type="button" value="ALTERAR DADOS"></a></td> <!-- CRIANDO UM BOTÃO ALTERAR PASSANDO O ID DO USUARIO NA URL VIA GET -->
                         <td><?=$check =($tbl[3] == 's')?"SIM":"NÃO"?></td> <!-- VALIDA S OU N E ESCREVE "SIM" E "NÃO"-->
                     </tr>
