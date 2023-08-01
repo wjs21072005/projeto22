@@ -3,7 +3,7 @@ include("../conectadb.php");
 
 session_start();
 
-$sql = "SELECT * FROM produto WHERE pro_ativo = 's'";
+$sql = "SELECT * FROM produtos WHERE pro_ativo = 's'";
 $retorno = mysqli_query($link, $sql);
 ?>
 
@@ -17,7 +17,7 @@ $retorno = mysqli_query($link, $sql);
 </head>
 <body>
     <!-- MENU DA LOJA -->
-</header>
+<header>
     <nav>
         <ul class="menu">
         <li><a href="loja.php"></a>HOME</li> <!-- BOTÃO NOME -->

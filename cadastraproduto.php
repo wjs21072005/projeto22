@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleheet" href="css/estiloadm.css">
+    <link rel="stylesheet"  href="./css/estiloadm.css">
     <title>CADASTRA PRODUTOS</title>
 </head>
 <body>
@@ -88,12 +88,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <textarea name="descricao" id="descrição" rows="4" resize="none"></textarea>
 <br>
 
+      <label>QUANTIDADE</label>
+           <input type="number" name="quantidade" id="quantidade">
+            <br>
+
 <label>CUSTO</label>
             <input type="decimal" name="custo" id="custo">
             <br>
 
             <label>PREÇO</label>
             <input type="decimal" name="preco" id="preco">
+
+      
 
             <label>IMAGEM</label>
             <input type="file" name="imagem" id="imagem">
