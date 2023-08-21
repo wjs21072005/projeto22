@@ -16,7 +16,9 @@ include("../conectadb.php");
     // VALIDA SE É REALMENTE O CLIENTE PARA LOGIN
     if($cont == 1){
         $sql = "SELECT * FROM clientes WHERE cli_cpf ='$cpf' AND cli_senha = '$senha' AND cli_ativo = 's'";
+        
         $retorno = mysqli_query($link, $sql);
+
         while($tbl = mysqli_fetch_array($retorno)){
             $_SESSION['idcliente'] = $tbl[0];
             $_SESSION['nomecliente'] = $tbl[2];

@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
 
         <div class="container">
-            <table border="1">
+            <table boarder="1">
                 <tr>
                     <th>NOME</th>
                     <th>ALTERAR DADOS</th>
